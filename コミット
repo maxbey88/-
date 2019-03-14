@@ -1,0 +1,52 @@
+#include <stdio.h>
+void main(int argc,char**argv)
+{
+    printf(argv[1]) ;
+    char a;
+    double b,c,d;
+        printf("加算：x 減算：y 乗算：z 除算：w 計算したい方法を入力して下さい\n");
+    //scanf("%c",&a);         //半角英字1文字を入れる
+
+switch(a){
+    case 'x':               //＋演算子機能を作る
+        printf("a+bを行います\n");
+        printf("aの入力：");
+    //scanf("%lf",&b);
+        printf("bの入力：");
+   // scanf("%lf",&c);
+    d = b + c;
+        printf("a+b=%lf",d);
+    break;
+
+    case 'y':               //-演算機能を作る
+        printf("a-bを行います\n");
+        printf("aの入力：");
+    //scanf("%lf",&b);
+        printf("bの入力：");
+    //scanf("%lf",&c);
+    d = b - c;
+        printf("a-b=%lf",d);
+    break;
+
+    case 'z':               //×演算子機能を作る
+        printf("a×bを行います\n");
+        printf("aの入力：");
+    //scanf("%lf",&b);
+        printf("bの入力：");
+    //scanf("%lf",&c);
+    d = b * c;
+        printf("a×b=%lf",d);
+    break;
+
+    case 'w':               //÷演算子機能をつける
+        printf("a÷bを行います\n");
+        printf("aの入力：");
+    //scanf("%lf",&b);
+        printf("bの入力：");
+    //scanf("%lf",&c);
+    d = b / c;
+        printf("a÷b=%lf",d);
+    break;
+    }
+        return 0;
+}
