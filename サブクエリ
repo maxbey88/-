@@ -1,0 +1,15 @@
+CREATE TABLE employees(employeename nvarchar(20), height INTEGER, weight INTEGER);
+INSERT INTO employees(employeename, height, weight) values ('hoge', 180, 80);
+INSERT INTO employees(employeename, height, weight) values ('hope', 129, 120);
+INSERT INTO employees(employeename, height, weight) values ('hope', 179, 180);
+INSERT INTO employees(employeename, height, weight) values ('hope', 129, 50);
+INSERT INTO employees(employeename, height, weight) values ('hope', 109, 40);
+
+
+
+
+select a.身長,a.体重,a.BMI 
+from (select syain.weight as 身長,syain.height as 体重,(10000 * syain.weight / (syain .height * syain .height)) as BMI
+from employees syain) as a
+where a.BMI > 25
+order by a.BMI asc;
