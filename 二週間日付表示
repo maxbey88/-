@@ -1,0 +1,13 @@
+
+function getNow() {
+	var now = new Date();
+	var mon = now.getMonth()+1; //１を足すこと
+    for(i = 0;i < 13; i++){
+	var day = now.getDate() + i;
+
+    var s = mon + "/" + day;
+  }
+	return s;
+}
+
+document.getElementById("view_time").innerHTML = getNow();
